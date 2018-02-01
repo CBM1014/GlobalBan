@@ -1,8 +1,10 @@
 package cn.ac.mcs.globalban;
 
 import org.bukkit.plugin.java.JavaPlugin;
+
+import cn.ac.mcs.globalban.utils.ConfigManager;
+
 import java.io.File;
-import cn.ac.mcs.globalban.Utils.ConfigManager;
 
 public class GlobalBan extends JavaPlugin {
     private static GlobalBan MainPlugin;
