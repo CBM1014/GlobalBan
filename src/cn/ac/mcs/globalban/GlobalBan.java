@@ -9,8 +9,8 @@ import cn.ac.mcs.globalban.utils.Configurable;
 import java.io.File;
 
 public class GlobalBan extends JavaPlugin {
-    private static GlobalBan MainPlugin;
-    public static File ConfigFile;
+    static GlobalBan instance;
+    
     @Override
     public void onEnable() {
         loadModules();
@@ -22,18 +22,13 @@ public class GlobalBan extends JavaPlugin {
             Bukkit.getPluginManager().disablePlugin(this);
             return;
         }
-        
-        getLogger().info("GlobalBan Enabled");
-    }
-    @Override
-    public void onDisable() {
-        getLogger().info("GlobalBan Disabled");
     }
 
-    public static GlobalBan getPlugin() {
-        return MainPlugin;
+    public static GlobalBan getInstance() {
+        return instance;
     }
 
-    public static void loadModules() {
+    static void loadModules() {
+        ;
     }
 }
